@@ -18,3 +18,10 @@ function lookupRank() {
         document.getElementById("result").innerText = "Student not found";
     }
 }
+// Listen for the Enter key press
+document.getElementById("registrationNo").addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        lookupRank();
+    }
+});
