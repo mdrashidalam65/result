@@ -1,70 +1,73 @@
-function addChar(input, character) {
-    if (input.value == null || input.value == "0")
-        input.value = character
-    else
-        input.value += character
-}
+// app.js
 
-function cos(form) {
-    form.display.value = Math.cos(form.display.value);
-}
+// Function to fetch and display student data
+async function fetchAndDisplayData() {
+    try {
+        // Fetch data from Excel
+        const data = await fetchDataFromExcel('data/students.xlsx');
 
-function sin(form) {
-    form.display.value = Math.sin(form.display.value);
-}
+        // Sort data by registration number
+        data.sort((a, b) => a.registrationNo - b.registrationNo);
 
-function tan(form) {
-    form.display.value = Math.tan(form.display.value);
-}
-
-function sqrt(form) {
-    form.display.value = Math.sqrt(form.display.value);
-}
-
-function ln(form) {
-    form.display.value = Math.log(form.display.value);
-}
-
-function exp(form) {
-    form.display.value = Math.exp(form.display.value);
-}
-
-function deleteChar(input) {
-    input.value = input.value.substring(0, input.value.length - 1)
-}
-var val = 0.0;
-function percent(input) {
-    val = input.value;
-    input.value = input.value + "%";
-}
-
-function changeSign(input) {
-    if (input.value.substring(0, 1) == "-")
-        input.value = input.value.substring(1, input.value.length)
-    else
-        input.value = "-" + input.value
-}
-
-function compute(form) {
-
-    form.display.value = eval(form.display.value);
-}
-
-
-function square(form) {
-    form.display.value = eval(form.display.value) * eval(form.display.value)
-}
-
-function checkNum(str) {
-    for (var i = 0; i < str.length; i++) {
-        var ch = str.charAt(i);
-        if (ch < "0" || ch > "9") {
-            if (ch != "/" && ch != "*" && ch != "+" && ch != "-" && ch != "."
-                && ch != "(" && ch != ")" && ch != "%") {
-                alert("invalid entry!")
-                return false
-            }
-        }
+        // Display data
+        displayStudentData(data);
+    } catch (error) {
+        console.error('Error fetching or displaying data:', error);
     }
-    return true
 }
+
+// Function to fetch data from Excel
+function fetchDataFromExcel(filePath) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const data = new Uint8Array(e.target.result);
+            const workbook = XLSX.read(data, { type: 'array' });
+            const sheetName = workbook.SheetNames[0];
+            const worksheet = workbook.Sheets[sheetName];
+            const jsonData = XLSX.utils.sheet_to_json(worksheet);
+
+            // Transform Excel data to match our expected format
+            const studentData = jsonData.map(row => ({
+                registrationNo: row['Registration No'], // Assuming the column header in Excel is 'Registration No'
+                name: row['Name'] // Assuming the column header in Excel is 'Name'
+            }));
+
+            resolve(studentData);
+        };
+
+        reader.onerror = function (error) {
+            reject(error);
+        };
+
+        // Read Excel file
+        fetch(filePath)
+            .then(response => response.arrayBuffer())
+            .then(buffer => reader.readAsArrayBuffer(new Blob([buffer])));
+    });
+}
+
+// Function to display student data
+function displayStudentData(data) {
+    const studentRankingsSection = document.getElementById('student-rankings');
+
+    // Clear previous content
+    studentRankingsSection.innerHTML = '';
+
+    // Create a list to display student rankings
+    const ul = document.createElement('ul');
+
+    // Loop through student data and create list items
+    data.forEach((student, index) => {
+        const li = document.createElement('li');
+        li.textContent = `${index + 1}. ${student.name} (Reg. No: ${student.registrationNo})`;
+        ul.appendChild(li);
+    });
+
+    // Append the list to the section
+    studentRankingsSection.appendChild(ul);
+}
+
+// Fetch and display data when the page loads
+document.addEventListener('DOMContentLoaded', fetchAndDisplayData);
