@@ -20,20 +20,9 @@ const students = [
     { registrationNo: "21110111017", name: "Rajnish Kumar", cgpa: 7.36 },
     { registrationNo: "21110111018", name: "Asmit Kumar", cgpa: 8.09 },
     { registrationNo: "21110111019", name: "Amrit", cgpa: 6.81 },
-    { registrationNo: "21110111020", name: "Prince Kumar", cgpa: 6.11},
-    { registrationNo: "21110111021", name: " Kumar", cgpa: },
-    { registrationNo: "21110111022", name: " Kumar", cgpa: },
-    { registrationNo: "21110111023", name: " Kumar", cgpa: },
-    { registrationNo: "21110111024", name: " Kumar", cgpa: },
-    { registrationNo: "21110111025", name: " Kumar", cgpa: },
-    { registrationNo: "21110111026", name: " Kumar", cgpa: },
-    { registrationNo: "21110111027", name: " Kumar", cgpa: },
-    { registrationNo: "21110111028", name: " Kumar", cgpa: },
-
-    
+    { registrationNo: "21110111020", name: "Prince Kumar", cgpa: 6.11}, 
     { registrationNo: "21110111029", name: "Pankaj Kumar", cgpa: 8.37 },
     { registrationNo: "21110111030", name: "Saurabh Kumar", cgpa: 8.03 },
-    
     { registrationNo: "21110111046", name: "Aman", cgpa: 7.31 },
     { registrationNo: "21110111057", name: "Md Rashid Alam", cgpa: 7.73 },
     
