@@ -10,6 +10,7 @@ Click the "Lookup Rank" button or press Enter to view the student's information.
 The student's name, rank, and CGPA will be displayed below.
 
 Technologies Used
+
 HTML
 CSS
 JavaScript
