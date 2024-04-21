@@ -7,11 +7,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Student Rank Lookup</h1>
-    <label for="registrationNo">Enter Registration No:</label>
-    <input type="text" id="registrationNo">
-    <button onclick="lookupRank()">Lookup Rank</button>
-    <div id="result"></div>
+    <div class="container">
+        <h1>Student Rank Lookup</h1>
+        <p>Welcome to the Student Rank Lookup website!</p>
+        <p>Please note that this website is not official and is for demonstration purposes only.</p>
+        <p>Enter the registration number of a student below to view their name, rank, and CGPA.</p>
+        
+        <form>
+            <label for="registrationNo">Enter Registration No:</label>
+            <input type="text" id="registrationNo">
+            <button onclick="lookupRank()">Lookup Rank</button>
+        </form>
+        
+        <div id="result" class="result"></div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Student Rank Lookup</p>
+        <p>This website is not official and is for demonstration purposes only.</p>
+    </footer>
 
     <!-- JavaScript Code -->
     <script src="script.js"></script>
