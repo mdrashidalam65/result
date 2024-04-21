@@ -42,7 +42,7 @@ const students = [
     { registrationNo: "22110111903", name: "Shashikant Kumar", cgpa: 7.14 },
     { registrationNo: "22110111904", name: "Rahul Kumar", cgpa: 6.69 },
     { registrationNo: "22110111905", name: "Harsh Raj", cgpa: 8.79 },
-    { registrationNo: "22110111906", name: "Amarnath Kumar Mahto", cgpa: 7.73 },
+    { registrationNo: "22110111906", name: "Amarnath Kumar Mahto", cgpa: 5.13 },
     // Add more students
 ];
 
