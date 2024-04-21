@@ -2,10 +2,10 @@
 const students = [
     { registrationNo: "21110111057", name: "Md Rashid Alam", cgpa: 7.72 },
     { registrationNo: "21110111018", name: "Asmit Kumar", cgpa: 8.20 },
-    { registrationNo: "21110111029", name: "Saurabh Kumar", cgpa: 8.03 },
+    { registrationNo: "21110111030", name: "Saurabh Kumar", cgpa: 8.03 },
     { registrationNo: "21110111029", name: "Pankaj Kumar", cgpa: 8.40 },
-    { registrationNo: "21110111029", name: "Amit Ranjan", cgpa: 7.40 },
-    { registrationNo: "21110111029", name: "Aman ", cgpa: 7.50 },
+    { registrationNo: "21110111006", name: "Amit Ranjan", cgpa: 7.40 },
+    { registrationNo: "21110111046", name: "Aman ", cgpa: 7.50 },
 
     // Add more students
 ];
