@@ -83,7 +83,7 @@ function lookupRank() {
     if (student) {
         document.getElementById("result").innerHTML = `
             <p>Name: ${student.name}</p>
-            <p>Rank: ${student.rank}</p>
+            <p>Rank out of 60: ${student.rank}</p>
             <p>CGPA: ${student.cgpa}</p>
         `;
     } else {
