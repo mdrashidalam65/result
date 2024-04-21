@@ -19,11 +19,27 @@ const students = [
     { registrationNo: "21110111017", name: "Rajnish Kumar", cgpa: 7.36 },
     { registrationNo: "21110111018", name: "Asmit Kumar", cgpa: 8.09 },
     { registrationNo: "21110111019", name: "Amrit", cgpa: 6.81 },
-    { registrationNo: "21110111020", name: "Prince Kumar", cgpa: 6.11}, 
+    { registrationNo: "21110111020", name: "Prince Kumar", cgpa: 6.11},
+    { registrationNo: "21110111021", name: "Honey Jay", cgpa: 7.12},
+    { registrationNo: "21110111022", name: "Ritu Rani", cgpa: 7.06},
+    { registrationNo: "21110111023", name: "Raushan Kumar", cgpa: 5.14},
+    { registrationNo: "21110111024", name: "Mehwish Jawed", cgpa: 7.62},
+    { registrationNo: "21110111025", name: "Dharmendra Paswan", cgpa: 6.11},
+    { registrationNo: "21110111026", name: "Prince Kumar", cgpa: 6.11},
+    { registrationNo: "21110111027", name: "Prince Kumar", cgpa: 6.11},
+    { registrationNo: "21110111028", name: "Prince Kumar", cgpa: 6.11},
     { registrationNo: "21110111029", name: "Pankaj Kumar", cgpa: 8.37 },
     { registrationNo: "21110111030", name: "Saurabh Kumar", cgpa: 8.03 },
     { registrationNo: "21110111046", name: "Aman", cgpa: 7.31 },
     { registrationNo: "21110111057", name: "Md Rashid Alam", cgpa: 7.73 },
+    { registrationNo: "22110111901", name: "Puja Kumari", cgpa: 7.63 },
+    { registrationNo: "22110111902", name: "Archna Kumari", cgpa: 8.53 },
+    { registrationNo: "22110111903", name: "Shashikant Kumar", cgpa: 7.14 },
+    { registrationNo: "22110111904", name: "Rahul Kumar", cgpa: 6.69 },
+    { registrationNo: "22110111905", name: "Harsh Raj", cgpa: 8.79 },
+    { registrationNo: "22110111906", name: "Amarnath Kumar Mahto", cgpa: 7.73 },
+
+    
     // Add more students
 ];
 
