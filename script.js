@@ -24,7 +24,6 @@ const students = [
     { registrationNo: "21110111022", name: "Ritu Rani", cgpa: 7.10 },
     { registrationNo: "21110111023", name: "Raushan Kumar", cgpa: 5.44 },
     { registrationNo: "21110111024", name: "Mehwish Jawed", cgpa: 7.71 },
-    { registrationNo: "21110111025", name: "Dharmendra Paswan", cgpa: 4.79 },
     { registrationNo: "21110111026", name: "Raj Kumar", cgpa: 7.62 },
     { registrationNo: "21110111027", name: "Aman Raj", cgpa: 6.30 },
     { registrationNo: "21110111028", name: "Santosh Sharma", cgpa: 5.75 },
@@ -83,7 +82,7 @@ function lookupRank() {
     if (student) {
         document.getElementById("result").innerHTML = `
             <p>Name: ${student.name}</p>
-            <p>Rank out of 66 Students: ${student.rank}</p>
+            <p>Rank out of 65 Students: ${student.rank}</p>
             <p>CGPA: ${student.cgpa}</p>
         `;
     } else {
