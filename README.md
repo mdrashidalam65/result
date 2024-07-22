@@ -9,13 +9,13 @@ Enter the registration number of the student in the input field.
 Click the "Lookup Rank" button or press Enter to view the student's information.
 The student's name, rank, and CGPA will be displayed below.
 
-Technologies Used
+Technologies Used:
 
 HTML
 CSS
 JavaScript
 
-Demo
+Demo:
 You can view a live demo of the website here. https://mdrashidalam65.github.io/result/
 
 Author
